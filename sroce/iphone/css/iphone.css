@@ -1,0 +1,182 @@
+﻿.content_product_sp_slide {
+	text-align:center;
+}
+#slidersp {
+	margin-top:65px;
+}
+#slide_product_next img {
+	max-width:100%;
+}
+.fifty li{
+	width:50%;
+	border:1px solid #ccc;
+	margin-left:-1px;
+	text-align:center;
+}
+.onehung li{
+	width:100%;
+	border:1px solid #ccc;
+	margin-left:-1px;
+	text-align:center;
+}
+.thirty li{
+	width:33.3%;
+	border:1px solid #ccc;
+	margin-left:-1px;
+	text-align:center;
+}
+.nav-tabs  .active {
+	background:#909090;
+}
+.nav-tabs li a {
+	border:none !important;
+	background: none !important;
+}
+
+.nav-tabs .active a {
+	color:#fff !important;
+}
+.total-pay {
+	padding-top:30px;
+	text-align:center;
+	font-weight:bold;
+	font-size:20px;
+}
+.tab-content {
+	margin-top:15px;
+}
+
+#design-case {
+	width:100%;
+	margin-top:20px;
+	background:#6f9ef4;
+	color:#fff;
+	font-size:14px;
+	border:none;
+	height:40px;
+	line-height:40px;
+}
+
+.pecen20 {
+	padding-left:15px;
+	padding-right:15px;
+	width:20%;
+	float:left;
+	text-align:center;
+	overflow:hidden;
+}
+.pecen20 img{
+	max-width:100%;
+	margin-bottom:10px;
+}
+
+.pecen80 {
+	padding-left:15px;
+	padding-right:15px;
+	width:80%;
+	float:left;
+	text-align:center;
+	height:100%;
+}
+.pecen80 img{
+	max-width:100%;	
+}
+
+
+/*test
+*******/
+#drag-1, #drag-2 {
+	width:100px;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.drag {
+	position:absolute;
+	width:80%;
+	height:100%;
+}
+#case-important img{
+	position:absolute;
+}
+
+
+
+#arrow {
+  width: 100%;
+  height: 100%;
+}
+
+#angle-info {
+  color: #666;
+  font-size: 2em;
+  position: absolute;
+}
+
+#scale-element {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+#scale-element.reset {
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.resize-drag {
+  background-color: #29e;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 20px;
+
+  width: 120px;
+
+  /* This makes things *much* easier */
+  box-sizing: border-box;
+}
+
+.resize-container {
+  width: 100%;
+  height: 240px;
+}
+
+
+
+#stage {
+  background: #20bb5f;
+  border: 5px solid #009b2f;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  font: 30px;
+  left: 200px;
+  top: 50px;
+  position: relative;
+}
+
+.box {
+      padding: 5px;
+      background: red;
+      margin: 10px;
+  position:relative;
+  z-index: 3;
+}
+.drag-target {
+  background: blue;
+  z-index: 1;
+}
+.drag-target-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
