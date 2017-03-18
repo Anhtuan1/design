@@ -65,7 +65,7 @@
     -webkit-transform: translate3d(0px, 0px, 0px); }
   .owl-carousel .owl-item {
     position: relative;
-    min-height: 1px;
+    min-height: 150px;
     float: left;
     -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
@@ -75,7 +75,7 @@
     width: 100%;*/
     -webkit-transform-style: preserve-3d; }
   .owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
-    display: block; }
+    display: none; }
   .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
     cursor: pointer;
     cursor: hand;
@@ -199,7 +199,6 @@
 	 position:absolute;
 	 width: 100px;
     text-align: center;
-	top: 250px;
 	left: 0;
     right: 0;
 	margin:auto;

@@ -586,7 +586,7 @@ input[type="checkbox"] {
 #backgourndmenu {
 	background:rgba(0,0,0,0.6);	
     margin-top:60px;    
-    z-index:100;
+    z-index:131;
 	width:100%;
 	float:left;
 	bottom:0;

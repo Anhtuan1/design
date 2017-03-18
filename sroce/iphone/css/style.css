@@ -44,6 +44,7 @@ body {
     color: #343434;
     background: #fff;
 	font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+	overflow: hidden;
 }
 
 input[type="checkbox"] {	
@@ -86,7 +87,7 @@ input[type="checkbox"] {
 	margin:0px;
 	padding: 7px 0px;
     height: 60px;
-	z-index:1000;
+	z-index:130;
 }
 #menu_nav .navbar-collapse {
 	padding:0px;
@@ -574,6 +575,7 @@ input[type="checkbox"] {
 	height:45px;
 	padding:0px;
 }
+
 #headersp {
 	width:100%;
 	float:left;
@@ -581,18 +583,17 @@ input[type="checkbox"] {
 	border-bottom:1px solid #000;
 	background:#fff;
 }
-
-
 #backgourndmenu {
 	background:rgba(0,0,0,0.6);	
     margin-top:60px;    
-    z-index:100;
+    z-index:131;
 	width:100%;
 	float:left;
 	bottom:0;
 	top:0;
 	position:absolute;
 }
+
 .relativeclass {
 	position:relative;
 }
