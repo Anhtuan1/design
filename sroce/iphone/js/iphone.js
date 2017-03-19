@@ -48,6 +48,7 @@
 				{
 					$("#content-themes").empty();
 					$("#content-themes").append(response);
+					//$("#content-themes").hide().append(response).fadeIn(500);
 					
 				},
 				error:function(error){
@@ -68,7 +69,6 @@ function heightslide(){
 	var height_value_menu = document.getElementById('headersp').clientHeight;
 	var height_slide = window.innerHeight - height_value_phone - height_value_button - height_value_menu-25;
 	$(document.getElementById('slide_product_next')).css({'height': height_slide+'px'});
-	$('.content_product_sp_slide img').css({'max-height': height_slide+'px'});	
-			
+	$('.content_product_sp_slide img').css({'max-height': height_slide+'px'});				
 }
 

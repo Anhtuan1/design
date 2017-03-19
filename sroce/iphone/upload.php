@@ -13,7 +13,7 @@
     for ($i = 0; $i < 15; $i++) {
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }    
-	$file = 'upload/' . $randomString . '.png';
+	$file = 'upload/' . $randomString . '.jpeg';
 	$success = file_put_contents($file, $data2);
 	
 	echo $file;

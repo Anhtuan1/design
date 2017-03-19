@@ -214,13 +214,12 @@
 }
 
 #button-gate {
-	position: relative;
-    
+	position: fixed;    
     width: 100%;
-    background: #fff;
-    margin-top: 0px;
+    background: #fff;    
     z-index: 120;
     float: left;
+	bottom:0px;
 }
 
 #beardkum {
@@ -249,22 +248,62 @@
 	font-size:27px;
 	
 }
+@font-face {
+	font-family: 'SimplyGlamorous';
+	src: url('fonts/url/SimplyGlamorous.eot');
+	src: local('SimplyGlamorous'), url('fonts/url/SimplyGlamorous.woff') format('woff'), url('fonts/url/SimplyGlamorous.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'kindergarten';
+	src: url('fonts/url/kindergarten.eot');
+	src: local('kindergarten'), url('fonts/url/kindergarten.woff') format('woff'), url('fonts/url/kindergarten.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'NiconneRegular';
+	src: url('fonts/url/NiconneRegular.eot');
+	src: local('NiconneRegular'), url('fonts/url/NiconneRegular.woff') format('woff'), url('fonts/url/NiconneRegular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Planewalker';
+	src: url('fonts/url/Planewalker.eot');
+	src: local('Planewalker'), url('fonts/url/Planewalker.woff') format('woff'), url('fonts/url/Planewalker.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'QuickToy';
+	src: url('fonts/url/QuickToy.eot');
+	src: local('QuickToy'), url('fonts/url/QuickToy.woff') format('woff'), url('fonts/url/QuickToy.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'redcoat';
+	src: url('fonts/url/redcoat.eot');
+	src: local('redcoat'), url('fonts/url/redcoat.woff') format('woff'), url('fonts/url/redcoat.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'RobotoCondensedBold';
+	src: url('fonts/url/RobotoCondensedBold.eot');
+	src: local('RobotoCondensedBold'), url('fonts/url/RobotoCondensedBold.woff') format('woff'), url('fonts/url/RobotoCondensedBold.ttf') format('truetype');
+}
 .font1 {
-	font-family:serif;
+	font-family:SimplyGlamorous;
 }
 .font2 {
-	font-family:arial;
+	font-family:kindergarten;
 }
 .font3 {
-	font-family:fantasy;
+	font-family:NiconneRegular;
 }
 .font4 {
-	font-family:monospace;
+	font-family:Planewalker;
 }
 .font5 {
-	font-family:inherit;
+	font-family:QuickToy;
 }
-
+.font6 {
+	font-family:redcoat;
+}
+.font7 {
+	font-family:RobotoCondensedBold;
+}
 #add_content_text {
 	background:#5b91ec;
 	padding:10px 30px;

@@ -3,6 +3,8 @@ var countstring = 0;
 var delete_el = '';
 var delete_id = '';
 var delete_arr = [];
+var loadcase = 0;
+var loadbutton = 0;
 var phoneCaseDesign_height = document.getElementById('phone-case-design').clientHeight;
 var phoneCaseDesign_width = document.getElementById('phone-case-design').clientWidth;
 
@@ -11,7 +13,17 @@ var header_height = document.getElementById('headersp').clientHeight;
 var button_gate_height = document.getElementById('button-gate').clientHeight;
 $(document).ready(function () {	
 	
-
+		
+		
+		$("#template-case img").load(function(){ 
+			loadcase = 1;
+			load_img_phone();
+						
+		});
+		$("#button-gate input").load(function(){ 
+			loadbutton = 1;
+			load_img_phone();			
+		});
 		var myElement = document.getElementById('myElement');			
 			var x_myElement = 0;
 			var y_myElement = 0;
@@ -36,7 +48,7 @@ $(document).ready(function () {
 		$("#textpage").hide();
 		
 		$("#button-background").click(function() {
-			$("#backgroundpage").show();		
+			$("#backgroundpage").fadeIn();		
 			document.getElementById('background_input_add').value = '';
 		});	
 		
@@ -45,13 +57,13 @@ $(document).ready(function () {
 		});		
 		
 		$("#color_add").click(function() {
-			$("#colorpage").show();
+			$("#colorpage").fadeIn();
 			document.getElementById('fooclor').jscolor.show();	
 		});
 		
 		
 		$("#text_add").click(function() {
-			$("#textpage").show();		
+			$("#textpage").fadeIn();		
 			
 			$(document.getElementById('font_family_text')).css({'height':(window.innerHeight-170)/2+'px'});	
 			
@@ -62,7 +74,7 @@ $(document).ready(function () {
 		
 		
 		$("#stamp_add").click(function() {
-			$("#stamppage").show();		
+			$("#stamppage").fadeIn();		
 			document.getElementById('stamp_input_add').value = '';
 		});	
 		
@@ -72,9 +84,7 @@ $(document).ready(function () {
 		
 			
 		/***************font text *********/
-		setTimeout(function () { 
-			load_img_phone();		
-		},100);
+		
 		
 		
 		$("#font_family_text a").click(function(ev) {
@@ -95,14 +105,14 @@ $(document).ready(function () {
 			   runEvent(element_case);
 			},300);						
 			
-			$("#stamppage").hide();
+			$("#stamppage").fadeOut();
 		});
 		
 		$("#backgroundpage a").click(function(ev) {
 			document.getElementById('background_input_add').value = this.getAttribute("imgbackground");	
 			$(document.getElementById('phone-background')).css({'background':'url('+document.getElementById('background_input_add').value+')'});						
 			
-			$("#backgroundpage").hide();
+			$("#backgroundpage").fadeOut();
 		});
 		
 		var element_case_text = [];
@@ -119,36 +129,36 @@ $(document).ready(function () {
 			
 			
 			document.getElementById('foo').jscolor.died();
-			$("#textpage").hide();
+			$("#textpage").fadeOut();
 			
 		});
 			
 		$("#cancel_content_background").click(function(ev) { 
 			document.getElementById('background_input_add').value = '';
-			$("#backgroundpage").hide();
+			$("#backgroundpage").fadeOut();
 		
 		}); 
 			
 		 $("#cancel_content_stamp").click(function(ev) { 
 			document.getElementById('stamp_input_add').value = '';
-			$("#stamppage").hide();
+			$("#stamppage").fadeOut();
 		
 		}); 
 		
 		$("#cancel_content_text").click(function(ev) { 
 			document.getElementById('foo').jscolor.died();
-			$("#textpage").hide();		
+			$("#textpage").fadeOut();		
 		}); 
 		
 		$("#cancel_content_color").click(function(ev) {
 			document.getElementById('fooclor').jscolor.died();
-			$("#colorpage").hide();		
+			$("#colorpage").fadeOut();		
 		});
 		
 		$("#add_content_color").click(function(ev) {
 			$(document.getElementById('phone-background')).css({'background':'#'+document.getElementById('fooclor').value});	
 			document.getElementById('fooclor').jscolor.died();
-			$("#colorpage").hide();
+			$("#colorpage").fadeOut();
 		});
 		
 		$("#delete_el").click(function(ev) {
@@ -502,7 +512,7 @@ function previewFile(){
    var reader  = new FileReader();
 	
 	   reader.onloadend = function () {
-		    document.getElementById('phone_content').innerHTML += "<div><img id='rect"+countstring+"_view' class='uploadimg' src='"+ reader.result+"'/></div>" ;		    
+		    document.getElementById('phone_content').innerHTML += "<div id='rect"+countstring+"_view'><img  id='imgrect"+countstring+"' class='uploadimg' src='"+ reader.result+"'/></div>" ;		    
 		   	setTimeout(function () {	    
 				element_case[countstring] = "rect"+countstring;
 				var height_text = document.getElementById('rect'+countstring+'_view').clientHeight;
@@ -523,8 +533,8 @@ function previewFile(){
  
  
  function load_img_phone(){
-
 		
+	if(loadcase==1&&loadbutton==1){
 		var phoneCaseDesign0 = document.getElementById('phone-case-design');	 
 	
 		var heightPhoneCaseDesign0 = phoneCaseDesign0.clientHeight;
@@ -550,8 +560,9 @@ function previewFile(){
 		
 		
 		$(document.getElementById('phone-background')).css({'height':phoneCaseDesign.clientHeight+'px','width':phoneCaseDesign.clientWidth+'px'});
-		
+	}	
 		
 	
 }
+
 

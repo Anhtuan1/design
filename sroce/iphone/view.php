@@ -115,6 +115,7 @@ if ($result->num_rows > 0) {
 					if($content != ''){ 
 						
 						for($i =0;$i<count($content);$i++){
+							echo "<div style='position: absolute;'> User:". $content[$i]['userId'] ." - Device: ". $content[$i]['device']."  </div>";
 							echo "<div id='template-case".$i."'>";								
 								$width_device = (($content[$i]['width'])*$content[$i]['zoom'])."px";
 								$height_device = (($content[$i]['height'])*$content[$i]['zoom'])."px";
@@ -122,12 +123,12 @@ if ($result->num_rows > 0) {
 								$imagedevice = $content[$i]['imagedevice'];
 								$max_width = $content[$i]['widthWindow']."px";
 								echo "<div id='template-case-content".$i."' class='reviewelement element'>";
-									echo "<div style='width:".$width_device.";height:".$height_device.";background:".$background_device.";border:1px solid #ccc;'> </div>";
+									echo "<div style='width:".$width_device.";height:".$height_device.";background:".$background_device.";'> </div>";
 									echo "<div id='phone_content' class='element' style='width:".$max_width."'>";		
 				
 										echo $content[$i]['content']['element'];
 									echo "</div>";
-									echo "<div style='width:".$width_device.";height:".$height_device.";'><a href='#' class='viewdevice' ><img  src='http://".$imagedevice."'style='width:100%;' /></a></div>";
+									echo "<div style='width:".$width_device.";height:".$height_device.";border:1px solid #ccc;'><a href='#' class='viewdevice' ><img  src='http://".$imagedevice."'style='width:100%;' /></a></div>";
 									
 								echo "</div>";
 							echo "</div>";
